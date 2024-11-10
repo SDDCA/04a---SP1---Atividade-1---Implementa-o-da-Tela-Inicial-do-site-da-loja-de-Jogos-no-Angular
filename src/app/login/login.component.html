@@ -1,26 +1,31 @@
-<main>
+<main >
   <section id="section-login">
     <h2>Login</h2>
-
     <form class="row g-3">
-      <label for="staticUsuario" class="visually-hidden">Usuário</label>
-      <input
-        type="text"
-        readonly
-        class="form-control"
-        id="staticUsuario"
-        placeholder="email@exemplo.com"
-      />
+      <div>
+        <label class="visually-hidden" for="Usuario" >Usuário</label>
+        <input
+          type="text"
+          name="usuario"
+          [(ngModel)]="usuario"
+          class="form-control"
+          id="Usuario"
+          placeholder="email@exemplo.com"
+        />
 
-      <label for="inputPassword2" class="visually-hidden">Senha</label>
-      <input
-        type="password"
-        class="form-control"
-        id="inputPassword2"
-        placeholder="Senha"
-      />
+        <br />
 
-      <button type="submit" class="btn btn-primary mb-3">Login</button>
+        <label class="visually-hidden" for="Password">Senha</label>
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="senha"
+          class="form-control"
+          id="Password"
+          placeholder="Senha"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-3" (click)="fazerLogin()">Login</button>
     </form>
   </section>
 </main>
